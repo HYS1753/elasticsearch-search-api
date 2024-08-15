@@ -97,7 +97,7 @@ http://localhost:8080/api/v1/search?query=python
   },
   "source": [
     {
-      "id": "S000001223786",
+      "id": "9788979148688",
       "bookName": "Python",
       "publisher": "한빛미디어",
       "author": "폴 배리|강권학",
@@ -106,7 +106,7 @@ http://localhost:8080/api/v1/search?query=python
       "rlseDate": "2011-10-28"
     },
     {
-      "id": "S000001637841",
+      "id": "9788998955953",
       "bookName": "파이썬(Python)",
       "publisher": "아티오",
       "author": "박병기",
@@ -115,7 +115,7 @@ http://localhost:8080/api/v1/search?query=python
       "rlseDate": "2017-01-30"
     },
     {
-      "id": "S000001028292",
+      "id": "9788965872023",
       "bookName": "Python 프로그래밍",
       "publisher": "상학당",
       "author": "남상엽|김상범|강현웅",
@@ -124,7 +124,7 @@ http://localhost:8080/api/v1/search?query=python
       "rlseDate": "2020-09-15"
     },
     {
-      "id": "S000001507398",
+      "id": "9788992649681",
       "bookName": "Python Cookbook",
       "publisher": "인피니티북스",
       "author": "데이비드 비즐리|브라이언 K. 존스|정승원",
@@ -133,7 +133,7 @@ http://localhost:8080/api/v1/search?query=python
       "rlseDate": "2014-02-05"
     },
     {
-      "id": "S000000935710",
+      "id": "9788960776982",
       "bookName": "Black Hat Python",
       "publisher": "에이콘출판",
       "author": "저스틴 지이츠|민병호",
