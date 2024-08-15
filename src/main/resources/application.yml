@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: elasticsearch-search-api
+
+server:
+  port: ${PORT:8080}
+  tomcat:
+    relaxed-query-chars: '\,^,|,{,},[,]'
+  shutdown: graceful
+  # forward-headers-strategy: framework
+
+logging:
+  config: "classpath:log4j2-spring.xml"
+  logLevel: ${LOG_LEVEL:debug}
+  path: ${LOGGING_PATH:logs}
+  filename: ${LOGGING_FILENAME:elasticsearch-search-api}
+  maxHistory: ${LOGGING_MAX_HISTORY:100}
+  sizeCap: ${LOGGING_SIZE_CAP:50MB}
+  intervalCap: ${LOGGING_INTERVAL_CAP:1}
+  kafka:
+    bootstrapServers: ${LOGGING_KAFKA_BOOTSTRAP_SERVERS:localhost:29092}
+    topic:
+      queryLog: ${LOGGING_KAFKA_QUERY_LOG_TOPIC:dev.test}
+
+elasticsearch:
+  host: ${ELASTICSEARCH_HOST:localhost}
+  port: ${ELASTICSEARCH_PORT:9200}
+  userId: ${ELASTICSEARCH_USER_ID:}
+  password: ${ELASTICSEARCH_PASSWORD:}
+  useSsl: ${ELASTICSEARCH_USE_SSL:false}
+  sslCertificateCheck: ${ELASTICSEARCH_CERTIFICATE_CHECK:false}
+  sslCert: ${ELASTICSEARCH_SSL_CERT:}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
+    display-request-duration: true
+  api-docs:
+    path: /api-docs
+  show-actuator: true
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+
+# springboot 3 이상 actuator 기본적으로 all block 이므로 pod 생성시 health 체크를 위한 health actuator open
+# springboot 2.x 의 경우 기본설정으로 health, info는 가능했음.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health"
+  health:
+    elasticsearch:
+      enabled: false
