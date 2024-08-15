@@ -41,7 +41,7 @@ Spring Boot를 활용하여 효율적이고 확장 가능한 애플리케이션�
 - Description: 도서명, 출판사, 저자 기준으로 상품을 검색하는 예시 API 입니다.
 
 **Request Example:**
-```json
+```
 http://localhost:8080/api/v1/search?query=python
 ```
 **Response Example:**
