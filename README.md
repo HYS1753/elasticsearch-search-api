@@ -26,6 +26,9 @@ Spring Boot를 활용하여 효율적이고 확장 가능한 애플리케이션�
 - springdoc-openapi-starter-webmvc-ui 2.2.0
 - spring-boot-starter-data-elasticsearch 3.1.0
 - spring-kafka 3.2.2
+- Elasticsearch 8.12.2
+- Kibana 8.12.2
+- Confluent Kafka 7.6.0
 
 ## Prerequisites
 다음과 같은 서비스가 로컬 또는 외부에서 실행되고 있어야 합니다.
